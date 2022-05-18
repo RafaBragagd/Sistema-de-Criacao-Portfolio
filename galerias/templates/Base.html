@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    <title>Portfólios</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <!--Inicio do Cabeçalho do site-->
+    <header class="cabecalho">
+        <!--Primeira divisão do cabeçalho onde é apresentado o site e alguns botões basicos de acesso-->
+        <div class="cabecalho__Apresentacao">
+            {% block apresentacaoTitulo %}
+            <H1 class="cabecalho__Titulo">Portfólios</H1>
+            {% endblock %}
+            {% block apresentacaoLogin %}
+            <ul class="cabecalho__Login">
+                <li>
+                    <!--Botão de registro no banco de dados do site-->
+                    <a class="cabecalho__Login__Register cabecalho__Login__Links" href="#">Registrar</a>
+                </li>
+                <li>
+                    <!--Botão de acesso a conta do site-->
+                    <a class="cabecalho__Login__Logar cabecalho__Login__Links" href="#">Entrar</a>
+                </li>
+            </ul>
+            {% endblock %}
+        </div>
+
+        <!--Segunda divisão do cabeçalho irá apresentar os botões de navegação do site-->
+        <nav class="cabecalho__Navegacao">
+            {% block navegacao %}
+            <ul>
+                <li class="cabecalho__Navegacao__link">
+                    <a href="#">Home</a>
+                </li>
+                <li class="cabecalho__Navegacao__link">
+                    <a href="#">Desenvolvimento de Jogos</a>
+                </li>
+                <li class="cabecalho__Navegacao__link">
+                    <a href="#">Desenvolvimento Backend</a>
+                </li>
+                <li class="cabecalho__Navegacao__link">
+                    <a href="#">Desenvolvimento Frontend</a>
+                </li>
+                <li class="cabecalho__Navegacao__link">
+                    <a href="#">Modelagem 3D</a>
+                </li>
+                <li class="cabecalho__Navegacao__link">
+                    <a href="#">Artistico</a>
+                </li>
+            </ul>
+            {% endblock %}
+        </nav>
+    </header>
+
+    <!--Inicio do corpo principal do site-->
+    <main class="Principal">
+        <section class="Principal__Galerias">
+            {% block galerias %}
+            <ul>
+                <li class="Principal__Galerias__Novas">
+                    <figure class="Principal__Galerias__Perfil">
+                        <img src="{% static 'img/professional-smiling-woman.jpg' %}" alt="Foto de Perfil" class="Principal__Galerias__Perfil__Foto">
+                        <figcaption>Maria Teste</figcaption>
+                    </figure>
+                    <ul class="Principal__Galerias__Amostra A6">
+                        <li class="Principal__Galerias__Amostra__Imagem Informacoes"><span class="Invisivel"></span><span class="texto"><p>Maria Teste<br>Projeto Arquiteturas</p></span></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/a-tall-building-reflects-the-sunlight.jpg' %}" alt="Predio Alto"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/a-woman-by-a-green-pool.jpg' %}" alt="Entrada Ornamental"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/calm-water-in-european-city.jpg' %}" alt="Cidade Noturna"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/city-sunset-smoke.jpg' %}" alt="Cidade no Por-do-Sol"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/exterior-building-pattern.jpg' %}" alt="Exterior de um Predio"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/urban-green-roof-drone-portrait.jpg' %}" alt="Jardins"></li>
+                    </ul>
+                </li>
+                <li class="Principal__Galerias__Novas">
+                    <figure class="Principal__Galerias__Perfil">
+                        <img src="{% static 'img/model-posing-in-red-light.jpg' %}" alt="Foto de Perfil" class="Principal__Galerias__Perfil__Foto">
+                        <figcaption>Maria Teste</figcaption>
+                    </figure>
+                    <ul class="Principal__Galerias__Amostra A5">
+                        <li class="Principal__Galerias__Amostra__Imagem Informacoes"><span class="Invisivel"></span><span class="texto"><p>Maria Teste<br>Projeto Fotografia</p></span></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/tattood-man-using-creative-technology.jpg' %}" alt="Homem tattoado usando tablet"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/stand-to-attention.jpg' %}" alt="Cachorro parado"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/dog-fetching-disc.jpg' %}" alt="Cachorro brincando com disco"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/man-at-desk-writing-on-ipad-with-stylus-portrait.jpg' %}" alt="Homem escrevendo no tablet"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/woman-works-while-dog-watches.jpg' %}" alt="Mulher trabalhando junto com seu cachorro"></li>
+                    </ul>
+                </li>
+                <li class="Principal__Galerias__Novas">
+                    <figure class="Principal__Galerias__Perfil">
+                        <img src="{% static 'img/smiling-man-in-blue.jpg' %}" alt="Foto de Perfil" class="Principal__Galerias__Perfil__Foto">
+                        <figcaption>João Teste</figcaption>
+                    </figure>
+                    <ul class="Principal__Galerias__Amostra A4">
+                        <li class="Principal__Galerias__Amostra__Imagem Informacoes"><span class="Invisivel"></span><span class="texto"><p>João Teste<br>Projeto Culinaria</p></span></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/restaurant-breakfast.jpg' %}" alt="Cafe da manha"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/berry-cheesecake.jpg' %}" alt="Bolo de frutas"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/hamburger-and-fries.jpg' %}" alt="Hamburguer"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/berries-granola.jpg' %}" alt="Frutas com granola"></li>
+                    </ul>
+                </li>
+                <li class="Principal__Galerias__Novas">
+                    <figure class="Principal__Galerias__Perfil">
+                        <img src="{% static 'img/young-woman-in-sunlight.jpg' %}" alt="Foto de Perfil" class="Principal__Galerias__Perfil__Foto">
+                        <figcaption>Maria Teste</figcaption>
+                    </figure>
+                    <ul class="Principal__Galerias__Amostra A3">
+                        <li class="Principal__Galerias__Amostra__Imagem Informacoes"><span class="Invisivel"></span><span class="texto"><p>Maria Teste<br>Projeto Moda</p></span></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/urban-mens-fashion.jpg' %}" alt="Homem com roupa urbana"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/stylish-woman-smiling.jpg' %}" alt="Mulher com chapeu 1"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/woman-in-summer-fashion.jpg' %}" alt="Mulher com chapeu 2"></li>
+                    </ul>
+                </li>
+                <li class="Principal__Galerias__Novas">
+                    <figure class="Principal__Galerias__Perfil">
+                        <img src="{% static 'img/bearded-young-man.jpg' %}" alt="Foto de Perfil" class="Principal__Galerias__Perfil__Foto">
+                        <figcaption>João Teste</figcaption>
+                    </figure>
+                    <ul class="Principal__Galerias__Amostra A2">
+                        <li class="Principal__Galerias__Amostra__Imagem Informacoes"><span class="Invisivel"></span><span class="texto"><p>João Teste<br>Projeto Tecnologia</p></span></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/server-ethernet.jpg' %}" alt="Servidor de Internet"></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/coding-on-laptop.jpg' %}" alt="Homem programando"></li>
+                    </ul>
+                </li>
+                <li class="Principal__Galerias__Novas">
+                    <figure class="Principal__Galerias__Perfil">
+                        <img src="{% static 'img/IMG-20220130-WA0028.jpg' %}" alt="Foto de Perfil" class="Principal__Galerias__Perfil__Foto">
+                        <figcaption>João Teste</figcaption>
+                    </figure>
+                    <ul class="Principal__Galerias__Amostra A1">
+                        <li class="Principal__Galerias__Amostra__Imagem Informacoes"><span class="Invisivel"></span><span class="texto"><p>Maria Teste<br>Projeto Moda</p></span></li>
+                        <li class="Principal__Galerias__Amostra__Imagem"><img src="{% static 'img/tablet-showing-fashion-design.jpg' %}" alt="Desenho de roupa"></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            {% endblock %}
+        </section>
+        {% block sobreSite %}
+        <section class="Principal__SobreSite">
+            <H2>Sobre Nós</H2>
+            <p>
+                Esté site é responsavel por deixar a mostra os seus projetos para que possam 
+                ser visualizados podendo selecionar o modelo mais apropriado para o seu tipo 
+                de conteudo aprimorando a experiencia de seu usuarios.
+            </p>
+            <div class="Principal__Sobresite__Cadastro">
+                <p>
+                    Quer fazer parte da nossa comunidade e começar a expor seus projetos? <br>
+                    aperte o botão a baixo e cadastre gratuitamente em nosso site.
+                </p>
+                <a href="#" class="Principal__SobreSite__Cadastro__Button">Cadastrar</a>
+            </div>
+        </section>
+        {% endblock %}
+    </main>
+
+    <!--Inicio do Rodapé-->
+    <footer class="Rodape">
+        {% block rodape %}
+        <span class="Rodape__Informacoes">
+            <h3>Email: </h3>
+            <p>emailteste@teste.com</p>
+        </span>
+        <span class="Rodape__Informacoes">
+            <h3>Celular: </h3>
+            <p>(XX)XXXXX-XXXX</p>
+        </span>
+        <span class="Rodape__Informacoes">
+            <h3>Endereço: </h3>
+            <p>Rua Teste, XXX, Teste, CidadeTeste-TS, XXXXX-XXX</p>
+        </span>
+        {% endblock %}
+    </footer>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>

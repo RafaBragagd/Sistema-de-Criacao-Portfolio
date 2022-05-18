@@ -1,0 +1,45 @@
+{% extends 'Base.html' %}
+
+{% load static %}
+
+    {% block title %}
+    <title>Usuarios</title>
+    {% endblock %}
+
+    {% block galerias %}
+
+    <table>
+        <tr>
+            <th>Ocupação</th>
+            <th>Empressa</th>
+            <th>Funções</th>
+            <th>Data Inicial</th>
+            <th>Data Final</th>
+            <th>Usuario</th>
+        </tr>
+        {% for profissao in object_list %}
+        <tr>
+            <td>{{ profissao.occupation }}</td>
+            <td>{{ profissao.company }}</td>
+            <td>{{ profissao.functions }}</td>
+            <td>{{ profissao.initialDate }}</td>
+            <td>{{ profissao.finaleDate }}</td>
+            <td>{{ profissao.user }}</td>
+            <td>
+                <a href="{% url 'atualizar-profissao' profissao.pk %}" title="Editar">Editar</a>
+                <a href="{% url 'excluir-profissao' profissao.pk %}" title="Excluir">Excluir</a>
+            </td>
+
+        </tr>
+        {% empty %}
+        <tr>
+            <tr aria-colspan="3">Nenhum campo registrado</tr>
+        </tr>
+        {% endfor %}    
+    </table>
+    <hr>
+    <h2>Lista de profissões registrados</h2>
+    {% endblock %}
+
+    {% block sobreSite %}
+    {% endblock %}

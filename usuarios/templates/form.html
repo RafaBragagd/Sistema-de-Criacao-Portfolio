@@ -1,0 +1,30 @@
+{% extends 'Base.html' %}
+
+{% load static %}
+
+    {% block title %}
+    <title>{{ titulo }}</title>
+    {% endblock %}
+
+    {% block galerias %}
+
+
+    <form action="" method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">{{ botao }}</button>
+
+    </form>
+    
+    <hr>
+    
+    <p>Preencha todos os campos obrigatórios</p>
+    
+    <h2>{{ titulo }}</h2>
+    {% endblock %}
+    
+    {% block sobreSite %}
+    {% endblock %}

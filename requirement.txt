@@ -1,0 +1,4 @@
+django
+django-braces
+Pillow
+django-cleanup

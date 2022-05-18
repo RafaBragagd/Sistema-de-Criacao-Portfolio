@@ -1,0 +1,311 @@
+/*0 - Inicio do corpo do site*/
+body{
+    background-color: #141414;
+    font-family: 'Courgette', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*1 - Inicio do cabeçalho*/
+.cabecalho{
+    position: default;
+    z-index: 1;
+    transition: 0.2s;
+}
+.cabecalhoFixed{
+    position: fixed;
+    left: -15px;
+    top: 0%;
+
+}
+.cabecalhoSubir{
+    top: -25%;
+    transition: 0.2s;
+}
+
+/*2 - Apresentação do site*/
+.cabecalho__Apresentacao{
+    display: flex;
+    width: 100vw;
+    min-height: 50px;
+    padding: 2vw;
+    background-color: #6B2700;
+    background-image: linear-gradient(167deg, #6B2700 5%, #D45E1C 46%, #6B2700 95%);
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(20px + 1vh);
+}
+.cabecalho__Titulo{
+    font-weight: bold;
+    color: #331378;
+    text-shadow: 0 0 1px #000000;
+}
+.cabecalho__Login{
+    display: flex;
+    font-size: 0.6em;
+}
+.cabecalho__Login__Links{
+    color: #331378;
+    text-decoration: none;
+    padding: 0.8rem;
+}
+.cabecalho__Login__Links:hover{
+    text-decoration:underline;
+    font-weight: bold;
+    color: #1A0449;
+}
+.cabecalho__Login__Register{
+    padding-right: 0.5vw;
+    border-right: 2px solid #331378;
+}
+.cabecalho__Login__Logar{
+    padding-left: 0.5vw;
+}
+
+/*2 - Navegação do site*/
+.cabecalho__Navegacao{
+    padding: 1vw;
+    border-top: 1px solid #181818;
+    background-color: #6B2700;
+    /*background-image: linear-gradient(180deg, #612500 0%, #963900 100%);*/
+}
+.cabecalho__Navegacao__link{
+    display: inline;
+    padding: 0.5vw;
+    font-size: calc(8px + 1vh);
+    font-weight: bold;
+    border-right: 2px solid #5A3C9B;
+    text-shadow: 0 0 1px #000000;
+}
+.cabecalho__Navegacao__link a{
+    text-decoration: none;
+    color: #5A3C9B;
+}
+.cabecalho__Navegacao__link:last-child{
+    border-right: none;
+}
+.cabecalho__Navegacao__link a:hover{
+    text-decoration: underline;
+    color: #1A0449;
+}
+
+/*1 - Corpo principal*/
+.Principal{
+    width: 75vw;
+    background-color: #D45E1C;
+    margin-top: 30px;
+    /*margin-top: calc(100px + 5vw);*/
+    margin-bottom: 30px;
+    padding: 1vw;
+    font-size: calc(15px + 1vh);
+    box-shadow: 0 0 1em #4d4d4d;
+}
+.PrincipalMargem{
+    margin-top: calc(100px + 4.5vw);
+}
+/*2 - Amostras das galerias mais novas*/
+.Principal__Galerias{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+.Principal__Galerias__Novas{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+	padding-right: 5vw;
+	padding-left: 5vw;
+	padding-bottom: 4vh;
+	margin-bottom: 1vh;
+	border-bottom: 1px solid #5A3C9B;
+}
+.Principal__Galerias__Perfil{
+    display: flex;
+    margin: calc(0.5vw + 0.25vh) 1vw;
+}
+.Principal__Galerias__Perfil__Foto{
+    width: 5vw;
+    height: 5vw;
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.Principal__Galerias__Perfil figcaption{
+    margin: 1vw;
+    align-self: flex-start;
+    color: #5A3C9B;
+}
+
+.A6{
+    display: grid;
+    position: relative;
+    align-self: flex-end;
+    width: 36vw;
+    height: 36vw;
+    grid-template-columns: 12vw 12vw 12vw;
+    grid-template-rows: 12vw 12vw 12vw;
+    overflow: hidden;
+}
+.A6 > li:nth-child(2){
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.A5{
+    
+    display: grid;
+    position: relative;
+    align-self: flex-end;
+    width: 36vw;
+    height: 36vw;
+    grid-template-columns: 12vw 12vw 12vw;
+    grid-template-rows: 24vw 18vw;
+    overflow: hidden;
+}
+.A5 > li:nth-child(2){
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.A4{
+    
+    display: grid;
+    position: relative;
+    align-self: flex-end;
+    width: 36vw;
+    height: 36vw;
+    grid-template-columns: 18vw 18vw;
+    grid-template-rows: 18vw 18vw;
+    overflow: hidden;
+}
+.A3{
+    display: grid;
+    position: relative;
+    align-self: flex-end;
+    width: 36vw;
+    height: 36vw;
+    grid-template-columns: 18vw 18vw;
+    grid-template-rows: 24vw 12vw;
+    overflow: hidden;
+}
+.A3 > li:nth-child(2){
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.A2{
+    display: grid;
+    position: relative;
+    align-self: flex-end;
+    width: 36vw;
+    height: 36vw;
+    grid-template-columns: 36vw;
+    grid-template-rows: 18vw 18vw;
+    overflow: hidden;
+}
+.A1{
+    display: grid;
+    position: relative;
+    align-self: flex-end;
+    width: 36vw;
+    height: 36vw;
+    grid-template-columns: 36vw;
+    grid-template-rows: 36vw;
+    overflow: hidden;
+}
+.Informacoes{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200%;
+    bottom: -100%;
+    transition: 0.5s;
+}
+.texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #acacac;
+    background-color: #000000cc;
+    width: 100%;
+    height: 50%;
+}
+.Invisivel{
+    background-color: none;
+    width: 100%;
+    height: 50%;
+}
+.Informacoes:hover{
+    bottom: 0%;
+    transition: 0.5s;
+}
+.Principal__Galerias__Amostra__Imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+/*2 - Blocos de Texto*/
+.Principal__SobreSite{
+    margin-top: 100px;
+}
+.Principal__SobreSite h2{
+    font-size: 1.5em;
+    color: #250963;
+    font-weight: bold;
+    margin: 1%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+.Principal__SobreSite p{
+    font-size: 1em;
+    color: #331378;
+    margin: 1%;
+    text-align: center;
+}
+.Principal__Sobresite__Cadastro{
+    display: flex;
+    margin-top: 10vh;
+    flex-direction: column;
+    align-items: center;
+}
+.Principal__SobreSite__Cadastro__Button{
+    display: inline;
+    color: #331378;
+    text-decoration: none;
+    background-color: #C3D11C;
+    padding: 5px 10px;
+    border-radius: 5% 40%;
+    box-shadow: 2px 3px 5px #000;
+}
+.Principal__SobreSite__Cadastro__Button:hover{
+    background-color: #848F00;
+    color: #1A0449;
+}
+
+/*1 - Rodapé*/
+.Rodape{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 30vh;
+    min-height: 50px;
+    padding: 2vw;
+    background-color: #6B2700;
+    background-image: linear-gradient(167deg, #6B2700 5%, #D45E1C 46%, #6B2700 95%);
+    align-items: flex-start;
+    font-size: calc(10px + 1vh);
+}
+.Rodape__Informacoes{
+    display: flex;
+    margin-bottom: 1%;
+    color: #5A3C9B;
+    text-shadow: 0 0 1px #000000;
+}
+.Rodape__Informacoes h3{
+    font-weight: bolder;
+    margin-right: 5px;
+}

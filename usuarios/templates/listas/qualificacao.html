@@ -1,0 +1,43 @@
+{% extends 'Base.html' %}
+
+{% load static %}
+
+    {% block title %}
+    <title>Usuarios</title>
+    {% endblock %}
+
+    {% block galerias %}
+
+    <table>
+        <tr>
+            <th>Titulo</th>
+            <th>Empressa</th>
+            <th>Data inicial</th>
+            <th>Data Final</th>
+            <th>Usuario</th>
+        </tr>
+        {% for qualificacao in object_list %}
+        <tr>
+            <td>{{ qualificacao.title }}</td>
+            <td>{{ qualificacao.company }}</td>
+            <td>{{ qualificacao.InitialDate }}</td>
+            <td>{{ qualificacao.finaleDate }}</td>
+            <td>{{ qualificacao.user }}</td>
+            <td>
+                <a href="{% url 'atualizar-qualificacao' qualificacao.pk %}" title="Editar">Editar</a>
+                <a href="{% url 'excluir-qualificacao' qualificacao.pk %}" title="Excluir">Excluir</a>
+            </td>
+
+        </tr>
+        {% empty %}
+        <tr>
+            <tr aria-colspan="3">Nenhum campo registrado</tr>
+        </tr>
+        {% endfor %}    
+    </table>
+    <hr>
+    <h2>Lista de qualificações registradas</h2>
+    {% endblock %}
+
+    {% block sobreSite %}
+    {% endblock %}

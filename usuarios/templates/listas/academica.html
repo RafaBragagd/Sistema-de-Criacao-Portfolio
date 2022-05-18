@@ -1,0 +1,43 @@
+{% extends 'Base.html' %}
+
+{% load static %}
+
+    {% block title %}
+    <title>Usuarios</title>
+    {% endblock %}
+
+    {% block galerias %}
+
+    <table>
+        <tr>
+            <th>Curso</th>
+            <th>Universidade</th>
+            <th>Data Inicial</th>
+            <th>Data Final</th>
+            <th>Usuario</th>
+        </tr>
+        {% for academica in object_list %}
+        <tr>
+            <td>{{ academica.course }}</td>
+            <td>{{ academica.university }}</td>
+            <td>{{ academica.InitialDate }}</td>
+            <td>{{ academica.finaleDate }}</td>
+            <td>{{ academica.user }}</td>
+            <td>
+                <a href="{% url 'atualizar-academico' academica.pk %}" title="Editar">Editar</a>
+                <a href="{% url 'excluir-academico' academica.pk %}" title="Excluir">Excluir</a>
+            </td>
+
+        </tr>
+        {% empty %}
+        <tr>
+            <tr aria-colspan="3">Nenhum campo registrado</tr>
+        </tr>
+        {% endfor %}    
+    </table>
+    <hr>
+    <h2>Lista de registrados academicos</h2>
+    {% endblock %}
+
+    {% block sobreSite %}
+    {% endblock %}

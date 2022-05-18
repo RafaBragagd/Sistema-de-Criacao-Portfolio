@@ -1,0 +1,41 @@
+{% extends 'Base.html' %}
+
+{% load static %}
+
+    {% block title %}
+    <title>Usuarios</title>
+    {% endblock %}
+
+    {% block galerias %}
+
+    <table>
+        <tr>
+            <th>Endereço</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Resumo</th>
+        </tr>
+        {% for user in object_list %}
+        <tr>
+            <td>{{ user.Address }}</td>
+            <td>{{ user.numberFone }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.abstract }}</td>
+            <td>
+                <a href="{% url 'atualizar-user' %}" title="Editar">Editar</a>
+                <a href="{% url 'excluir-user' %}" title="Excluir">Excluir</a>
+            </td>
+
+        </tr>
+        {% empty %}
+        <tr>
+            <tr aria-colspan="3">Nenhum campo registrado</tr>
+        </tr>
+        {% endfor %}    
+    </table>
+    <hr>
+    <h2>Lista de usuarios registrados</h2>
+    {% endblock %}
+
+    {% block sobreSite %}
+    {% endblock %}

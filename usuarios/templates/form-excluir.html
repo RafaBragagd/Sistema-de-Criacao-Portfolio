@@ -1,0 +1,32 @@
+{% extends 'Base.html' %}
+
+{% load static %}
+
+    {% block title %}
+    <title>Excluir</title>
+    {% endblock %}
+
+    {% block galerias %}
+
+
+    <form action="" method="POST">
+
+        <p>Deseja excluir o registro: {{ object }}?</p>
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">Excluir</button>
+
+    </form>
+    
+    <hr>
+    
+    <p>Confirme para excluir</p>
+    
+    <h2>Excluir cadastro</h2>
+    {% endblock %}
+    
+    {% block sobreSite %}
+    {% endblock %}
